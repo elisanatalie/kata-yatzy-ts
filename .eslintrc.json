@@ -1,0 +1,21 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [ "prettier"],
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { "selector": "enumMember", "format": ["PascalCase"] }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "off"
+  },
+  "overrides": [
+    {
+      "files": ["./src/test/_utils/**/*.ts"],
+      "env": {
+        "browser": false,
+        "jest": true,
+        "node": true
+      }
+    }
+  ]
+}
